@@ -65,7 +65,8 @@
 }
 
 .benefits-svg-link {
-    fill: #fafafa;
+    fill: transparent;
+    stroke: #fafafa;
 }
 
 .benefits-card-title {
