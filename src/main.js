@@ -1,1 +1,1 @@
-import { feroBg } from './js/hero';
+import { heroBg } from './js/hero.js';
