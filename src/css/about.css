@@ -190,6 +190,8 @@
   transform: rotate(180deg);
 }
 /* ------swiper------------- */
+.about-me-skills {
+}
 
 .swiper-container-wrapper {
   display: flex;
@@ -197,12 +199,16 @@
   justify-content: space-between;
   position: relative;
   width: 100%;
-  margin-bottom: 50px;
 }
 
-.about-me-swiper {
+.swiper.about-me-swiper {
+  height: 130px;
   width: 260px;
   margin-left: 0;
+  margin-right: 0;
+}
+.about-me-swiper-wrapper {
+  height: 130px;
 }
 
 .about-me-slide {
@@ -223,7 +229,8 @@
 }
 
 @media screen and (min-width: 768px) {
-  .about-me-swiper {
+  .swiper.about-me-swiper {
+    height: 200px;
     width: 600px;
   }
   .about-me-slide {
@@ -233,7 +240,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .about-me-swiper {
+  .swiper.about-me-swiper {
     width: 1200px;
   }
 }
@@ -245,7 +252,6 @@
 .custom-nav-btn {
   width: 40px;
   height: 40px;
-  margin-left: 10px;
   background-color: #007bff;
   color: white;
   border: none;
