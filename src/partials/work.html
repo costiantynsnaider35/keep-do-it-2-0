@@ -1,4 +1,4 @@
-<footer class="footer container section" id="footer">
+<footer class="footer container section" id="work-together">
   <div class="footer-title">
     <img
       src="../img/work/imagemini-photo.png"
@@ -15,12 +15,24 @@
   </div>
 
   <form class="footer-form">
-    <input
-      type="text"
-      class="footer-form-input"
-      placeholder="clients@gmail.com"
-    />
-    <input type="text" class="footer-form-input" placeholder="comments" />
+    <div class="footer-input-container">
+      <input
+        type="text"
+        class="footer-form-input"
+        placeholder="clients@gmail.com"
+        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        title="Please enter a valid email address"
+        required
+      />
+      <svg class="footer-line-svg">
+        <use href="./img/svg-icon.svg#icon-Vector-1"></use>
+      </svg>
+      <input type="text" class="footer-form-input" placeholder="comments" />
+      <svg class="footer-line-svg">
+        <use href="./img/svg-icon.svg#icon-Vector-1"></use>
+      </svg>
+    </div>
+
     <button type="submit" class="footer-btn">Send</button>
   </form>
   <div class="footer-contacts-container">
@@ -28,15 +40,22 @@
     <a href="" class="footer-link">+380 11 1111 11 11</a>
   </div>
 </footer>
-<div class="footer-modal-window">
+
+<div class="modal-overlay visually-hidden"></div>
+<div class="footer-modal-window visually-hidden" id="modal-window">
   <button type="button" class="close-btn">
-    <svg width="11" height="11" class="close-btn-svg">
-      <use href="../img/svg-icon.svg#icon-x-close"></use>
+    <svg width="22" height="22" class="close-btn-svg">
+      <use href="./img/svg-icon.svg#icon-x-close"></use>
     </svg>
   </button>
   <h2 class="footer-mw-title">Thank you for your interest in cooperation</h2>
   <p class="footer-mw-paragraph">
-    The menager will contact you shortly to discuss futher details and
+    The manager will contact you shortly to discuss further details and
     opportunities for cooperation. Please stay in touch
   </p>
 </div>
+
+<script type="module" defer src="../js/work.js"></script>
+
+<!-- mailto:lloydjefferson@gmail.com
+ tel:+3801111111111 -->
