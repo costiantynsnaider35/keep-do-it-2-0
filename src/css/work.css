@@ -143,8 +143,12 @@
 }
 .close-btn {
   color: #fafafa;
+  width: 22px;
+  height: 22px;
 }
-
+.close-btn-svg {
+  fill: #fafafa;
+}
 @media screen and (min-width: 768px) {
   .footer-header {
     font-family: 'Inter Tight', sans-serif;
