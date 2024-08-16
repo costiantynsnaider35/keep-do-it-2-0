@@ -1,68 +1,64 @@
+body {
+  overflow-x: hidden;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
   background-color: #1c1d20;
-  padding: 20px;
   overflow-x: hidden;
+  /* padding: 16px;  */
+  box-sizing: border-box;
 }
 
 .footer-title {
   display: flex;
-  align-items: flex-start;
-  margin-top: 32px;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
 .footer-title img {
   margin-right: 10px;
+  max-width: 100%;
+  height: auto;
 }
 
 .footer-header {
-  font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
-  font-size: 40px;
-  line-height: 1;
+  font-size: 24px;
+  line-height: 1.2;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
   margin: 0;
 }
-
-.footer-header-text {
-  display: inline-block;
-}
-
 .footer-header-span {
-  color: #0041e8;
+  color: #0033cc;
 }
-
 .footer-header-together {
-  display: inline-block;
-  margin-left: -60px;
-  margin-top: 10px;
+  padding-top: 8px;
+  margin-left: -20px;
 }
 
 .footer-form {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
   width: 100%;
+  gap: 16px;
 }
 
 .footer-input-container {
-  margin-top: 62px;
+  display: flex;
+  flex-direction: column;
   gap: 16px;
 }
 
 .footer-form-input {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 20px;
   border: none;
   color: #fafafa;
   background-color: #1c1d20;
-  max-width: 100%;
+
+  box-sizing: border-box;
 }
 
 .footer-link {
@@ -86,8 +82,8 @@
   stroke: rgba(250, 250, 250, 0.2);
 }
 
-.footer-form-input ::placeholder {
-  padding-bottom: 20px;
+.footer-form-input::placeholder {
+  color: rgba(250, 250, 250, 0.6);
 }
 
 .footer-form-input:active,
@@ -102,8 +98,8 @@
   background-color: #0041e8;
   border: none;
   border-radius: 50%;
-  padding: 10px 20px;
-  margin-top: 16px;
+  /* padding: 10px 20px; */
+  margin-top: 32px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   width: 100px;
@@ -114,26 +110,14 @@
   background-color: #0033cc;
 }
 
-.footer-link {
-  color: #fafafa;
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  padding: 10px 12px;
-  white-space: nowrap;
-}
-
 .footer-contacts-container {
-  margin-top: 60px;
+  margin-top: 32px;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
   flex-direction: row;
   gap: 4px;
-  margin-bottom: 32px;
+  flex-wrap: wrap;
 }
 
-/* Модальне вікно */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -146,24 +130,24 @@
 
 .footer-modal-window {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  gap: 64px;
+  gap: 32px;
   border: 1px solid rgba(250, 250, 250, 0.1);
   border-radius: 20px;
-  padding: 64px 32px;
+  padding: 32px;
   background-color: #1c1d20;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  width: 343px;
+  width: 90%;
+  max-width: 400px;
 }
 
 .footer-mw-title {
-  font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.5;
@@ -173,7 +157,6 @@
 }
 
 .footer-mw-paragraph {
-  font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -200,34 +183,32 @@
   display: none;
 }
 
-/* Різні медіа правила */
-
 @media screen and (min-width: 768px) {
   .footer-header {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 500;
-    font-size: 64px;
-    line-height: 1;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    color: #fafafa;
+    font-size: 32px;
   }
   .footer-img {
-    border-radius: 24px;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
   }
   .footer-form {
     flex-direction: row;
   }
   .footer-btn {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
   }
   .footer-contacts-container {
-    margin-bottom: 169px;
+    margin-bottom: 60px;
   }
 }
 
 @media screen and (min-width: 1440px) {
+  .footer-header {
+    font-size: 40px;
+  }
+  .footer-btn {
+    width: 100px;
+    height: 100px;
+  }
 }
