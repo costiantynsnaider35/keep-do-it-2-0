@@ -1,1 +1,2 @@
-import { heroBg } from './js/hero.js';
+import './js/hero.js';
+import './js/about.js';
