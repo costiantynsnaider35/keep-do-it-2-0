@@ -1,5 +1,6 @@
-import 'swiper/swiper-bundle.css';
 import Swiper from 'swiper';
+import 'swiper/css';
+import { Navigation } from 'swiper/modules';
 import 'accordion-js/dist/accordion.min.css';
 import Accordion from 'accordion-js';
 import '../css/about.css';
@@ -13,10 +14,12 @@ new Accordion('.accordion-container', {
 });
 
 // ----------------Swiper-
-new Swiper('.swiper', {
+const aboutSwiper = new Swiper('.about-me-swiper', {
+  modules: [Navigation],
   navigation: {
     nextEl: '.custom-nav-btn',
   },
+  slidesPerView: 2,
   spaceBetween: 0,
   loop: true,
   keyboard: {
