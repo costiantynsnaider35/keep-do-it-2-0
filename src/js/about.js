@@ -2,7 +2,7 @@ import 'swiper/swiper-bundle.css';
 import Swiper from 'swiper';
 import 'accordion-js/dist/accordion.min.css';
 import Accordion from 'accordion-js';
-import '../css/about.css';
+import './css/about.css';
 
 new Accordion('.accordion-container', {
   openOnInit: [0],
