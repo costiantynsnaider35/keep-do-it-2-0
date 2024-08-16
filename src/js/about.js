@@ -12,7 +12,7 @@ new Accordion('.accordion-container', {
   showMultiple: false,
 });
 
-// ---------------Swiper-
+// ----------------Swiper-
 new Swiper('.swiper', {
   navigation: {
     nextEl: '.custom-btn',
