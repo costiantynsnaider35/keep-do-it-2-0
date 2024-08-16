@@ -200,12 +200,12 @@
   margin-bottom: 50px;
 }
 
-.swiper {
+.about-me-swiper {
   width: 260px;
   margin-left: 0;
 }
 
-.swiper-slide {
+.about-me-slide {
   width: 130px;
   height: 130px;
   border: 1px solid white;
@@ -223,22 +223,22 @@
 }
 
 @media screen and (min-width: 768px) {
-  .swiper {
+  .about-me-swiper {
     width: 600px;
   }
-  .swiper-slide {
+  .about-me-slide {
     width: 200px;
     height: 200px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .swiper {
+  .about-me-swiper {
     width: 1200px;
   }
 }
 
-.swiper-slide.swiper-slide-active {
+.about-me-slide.swiper-slide-active {
   background-color: #0041e8;
 }
 
