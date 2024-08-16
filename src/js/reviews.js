@@ -11,7 +11,7 @@ function initializeSwiper() {
   const swiper = new Swiper('.swiper', {
     modules: [Navigation],
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 16,
     loop: false,
     speed: 500,
     navigation: {
