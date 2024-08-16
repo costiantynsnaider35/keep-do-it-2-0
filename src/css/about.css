@@ -242,7 +242,7 @@
   background-color: #0041e8;
 }
 
-.custom-navigation-button {
+.custom-nav-btn {
   width: 40px;
   height: 40px;
   margin-left: 10px;
@@ -255,6 +255,6 @@
   transition: background-color 0.3s ease;
 }
 
-.custom-navigation-button:hover {
+.custom-nav-btn:hover {
   background-color: #0056b3;
 }

@@ -15,7 +15,7 @@ new Accordion('.accordion-container', {
 // ----------------Swiper-
 new Swiper('.swiper', {
   navigation: {
-    nextEl: '.custom-btn',
+    nextEl: '.custom-nav-btn',
   },
   spaceBetween: 0,
   loop: true,
