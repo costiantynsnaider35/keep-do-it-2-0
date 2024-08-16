@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     try {
       const formData = new FormData(form);
-      const response = await fetch('/your-server-endpoint', {
+      const response = await fetch('', {
         method: 'POST',
         body: formData,
       });
