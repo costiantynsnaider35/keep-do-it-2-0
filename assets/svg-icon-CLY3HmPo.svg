@@ -45,5 +45,8 @@
 <symbol id="icon-Vector-4" viewBox="0 0 6240 32">
 <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="16" d="M0 16h6240"></path>
 </symbol>
+<symbol id="icon-menu-05" viewBox="0 0 32 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M4 11.333h24M4 20.667h24"></path>
+</symbol>
   </defs>
 </svg>
