@@ -43,18 +43,25 @@ function handlerScroll(evt) {
   });
 }
 
-export {
-  mobMenuOpen,
-  mobMenu,
-  mobMenuClose,
-  dropMenu,
-  dropMenuBtn,
-  mobMenuLink,
-  orderLink,
-  orderLinkMob,
-  openMobMenu,
-  closeMobMenu,
-  openDropMenu,
-  closeDropMenuECS,
-  handlerScroll,
+
+
+mobMenuOpen.addEventListener('click', openMobMenu);
+mobMenuClose.addEventListener('click', closeMobMenu);
+dropMenuBtn.addEventListener('click', openDropMenu);
+dropMenu.addEventListener('click', handlerScroll);
+mobMenuLink.addEventListener('click', handlerScroll);
+window.addEventListener('keydown', closeDropMenuECS);
+orderLink.addEventListener('click', handlerScroll);
+orderLinkMob.addEventListener('click', handlerScroll);
+
+window.onclick = function (evt) {
+  if (
+    !evt.target.matches('.header-menu') &&
+    !evt.target.matches('.drop-menu-nav')
+  ) {
+    dropMenu.classList.remove('drop-menu-show');
+  }
 };
+
+
+
