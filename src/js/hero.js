@@ -1,4 +1,4 @@
-import anime from 'animejs/lib/anime.es';
+import anime from 'animejs';
 
 
 export const heroBg = document.addEventListener('DOMContentLoaded', () => {
