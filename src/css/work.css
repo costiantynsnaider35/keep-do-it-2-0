@@ -1,64 +1,68 @@
-body {
-  overflow-x: hidden;
-}
-
 .footer {
   display: flex;
   flex-direction: column;
   background-color: #1c1d20;
+  padding: 20px;
   overflow-x: hidden;
-  /* padding: 16px;  */
-  box-sizing: border-box;
 }
 
 .footer-title {
   display: flex;
-  align-items: center;
-  margin-bottom: 16px;
+  align-items: flex-start;
+  margin-top: 32px;
 }
 
 .footer-title img {
   margin-right: 10px;
-  max-width: 100%;
-  height: auto;
 }
 
 .footer-header {
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 1.2;
+  font-size: 40px;
+  line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
   margin: 0;
 }
-.footer-header-span {
-  color: #0033cc;
+
+.footer-header-text {
+  display: inline-block;
 }
+
+.footer-header-span {
+  color: #0041e8;
+}
+
 .footer-header-together {
-  padding-top: 8px;
-  margin-left: -20px;
+  display: inline-block;
+  margin-left: -60px;
+  margin-top: 10px;
 }
 
 .footer-form {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
   width: 100%;
-  gap: 16px;
 }
 
 .footer-input-container {
-  display: flex;
-  flex-direction: column;
+  margin-top: 62px;
   gap: 16px;
 }
 
 .footer-form-input {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 20px;
   border: none;
   color: #fafafa;
   background-color: #1c1d20;
-
-  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .footer-link {
@@ -82,8 +86,8 @@ body {
   stroke: rgba(250, 250, 250, 0.2);
 }
 
-.footer-form-input::placeholder {
-  color: rgba(250, 250, 250, 0.6);
+.footer-form-input ::placeholder {
+  padding-bottom: 20px;
 }
 
 .footer-form-input:active,
@@ -98,8 +102,8 @@ body {
   background-color: #0041e8;
   border: none;
   border-radius: 50%;
-  /* padding: 10px 20px; */
-  margin-top: 32px;
+  padding: 10px 20px;
+  margin-top: 16px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   width: 100px;
@@ -110,14 +114,26 @@ body {
   background-color: #0033cc;
 }
 
-.footer-contacts-container {
-  margin-top: 32px;
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-  flex-wrap: wrap;
+.footer-link {
+  color: #fafafa;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 10px 12px;
+  white-space: nowrap;
 }
 
+.footer-contacts-container {
+  margin-top: 60px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 4px;
+  margin-bottom: 32px;
+}
+
+/* Модальне вікно */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -130,24 +146,24 @@ body {
 
 .footer-modal-window {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
-  gap: 32px;
+  gap: 64px;
   border: 1px solid rgba(250, 250, 250, 0.1);
   border-radius: 20px;
-  padding: 32px;
+  padding: 64px 32px;
   background-color: #1c1d20;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  width: 90%;
-  max-width: 400px;
+  width: 343px;
 }
 
 .footer-mw-title {
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.5;
@@ -157,6 +173,7 @@ body {
 }
 
 .footer-mw-paragraph {
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -183,32 +200,34 @@ body {
   display: none;
 }
 
+/* Різні медіа правила */
+
 @media screen and (min-width: 768px) {
   .footer-header {
-    font-size: 32px;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
   }
   .footer-img {
-    width: 50px;
-    height: 50px;
+    border-radius: 24px;
+    width: 70px;
+    height: 70px;
   }
   .footer-form {
     flex-direction: row;
   }
   .footer-btn {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
   }
   .footer-contacts-container {
-    margin-bottom: 60px;
+    margin-bottom: 169px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .footer-header {
-    font-size: 40px;
-  }
-  .footer-btn {
-    width: 100px;
-    height: 100px;
-  }
 }
