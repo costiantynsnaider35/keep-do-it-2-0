@@ -1,4 +1,4 @@
-<footer class="footer section footer-input-container" id="work-together">
+<footer class="footer container section" id="work-together">
   <div class="footer-title">
     <img
       src="./img/work/imagemini-photo.png"
@@ -24,16 +24,17 @@
         title="Please enter a valid email address"
         required
       />
-      <svg class="footer-line-svg">
+      <!-- <svg class="footer-line-svg">
         <use href="./img/svg-icon.svg#icon-Vector-1"></use>
-      </svg>
-      <input type="text" class="footer-form-input" placeholder="comments" />
-      <svg class="footer-line-svg">
+      </svg> -->
+      <input type="text" footer-form-input" placeholder="comments" />
+      <!-- <svg class="footer-line-svg">
         <use href="./img/svg-icon.svg#icon-Vector-1"></use>
-      </svg>
+      </svg> -->
     </div>
-
-    <button type="submit" class="footer-btn">Send</button>
+    <div class="footer-btn-container">
+      <button type="submit" class="footer-btn">Send</button>
+    </div>
   </form>
   <div class="footer-contacts-container">
     <a href="mailto:lloydjefferson@gmail.com" class="footer-link"
@@ -43,6 +44,7 @@
   </div>
 </footer>
 
+<div class="modal-overlay visually-hidden"></div>
 <div class="footer-modal-window visually-hidden" id="modal-window">
   <button type="button" class="close-btn">
     <svg width="22" height="22" class="close-btn-svg">
@@ -56,6 +58,4 @@
   </p>
 </div>
 
-<div class="modal-overlay"></div>
-
-<script type="module" src="./js/work.js"></script>
+<script type="module" defer src="./js/work.js"></script>
