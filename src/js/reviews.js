@@ -24,7 +24,7 @@ const swiper = new Swiper('.review-container', {
     enabled: true,
     onlyInViewport: true,
   },
-
+  zoom: true,
   zoom: {
     toggle: true,
   },
@@ -44,18 +44,20 @@ const swiper = new Swiper('.review-container', {
 });
 
 async function getReviwes() {
+  // const newArr = []; // array для перевірки на пустий масив від сервера
+  // newArr підставити у перевірку замість res.data, та розкоментувати
   try {
     const res = await axios.get('');
     console.log(res.data);
     if (res.data.length === 0) {
       reviwesList.insertAdjacentHTML(
         'beforeend',
-        '<p class="error-mes">Not Found</p>'
+        '<div class="err-container"><p class="error-mes">Not Found</p></div>'
       );
     } else {
       const reviwes = res.data
         .map(
-          reviwe => `<li class="review-item swiper-slide swiper-zoom-target">
+          reviwe => `<li class="review-item swiper-slide card-zoom">
             <img src="${reviwe.avatar_url}" alt="" class="review-item-img" />
             <h3 class="review-item-name">${reviwe.author}</h3>
             <p class="review-item-text">
@@ -64,11 +66,24 @@ async function getReviwes() {
           </li>`
         )
         .join('');
+      // this.jokes = [];
+      // заглушка для перевірки на помилку від сервера, розкоментувати this.jokes
 
       reviwesList.insertAdjacentHTML('beforeend', reviwes);
+
+      const reviewItems = document.querySelectorAll('.review-item');
+      reviewItems.forEach(item => {
+        item.addEventListener('click', () => {
+          item.classList.toggle('expanded');
+        });
+      });
     }
   } catch (err) {
     console.log(err);
+    reviwesList.insertAdjacentHTML(
+      'beforeend',
+      '<div class="err-container"><p class="error-mes">Not Found</p></div>'
+    );
     window.addEventListener('scroll', () => {
       if (isScrolledIntoView(targetSection) && !isToastShown) {
         iziToast.error({
