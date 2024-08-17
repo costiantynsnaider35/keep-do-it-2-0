@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   background-color: #1c1d20;
-  padding: 20px;
   overflow-x: hidden;
+  width: 100%;
 }
 
 .footer-title {
   display: flex;
   align-items: flex-start;
-  margin-top: 32px;
+  margin-bottom: 16px;
 }
 
 .footer-title img {
@@ -42,29 +42,29 @@
 }
 
 .footer-form {
+  margin: 62px auto 64px auto;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
   width: 100%;
-}
-
-.footer-input-container {
-  margin-top: 62px;
-  gap: 16px;
-}
-
-.footer-form-input {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 20px;
-  border: none;
-  color: #fafafa;
-  background-color: #1c1d20;
   max-width: 100%;
 }
 
+.footer-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.footer-form-input {
+  border: none;
+  border-bottom: 2px solid rgba(250, 250, 250, 0.2);
+  color: #fafafa;
+  background-color: #1c1d20;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  box-sizing: border-box;
+}
 .footer-link {
   color: #fafafa;
   border: 1px solid rgba(250, 250, 250, 0.2);
@@ -86,54 +86,42 @@
   stroke: rgba(250, 250, 250, 0.2);
 }
 
-.footer-form-input ::placeholder {
-  padding-bottom: 20px;
+.footer-form-input::placeholder {
+  color: rgba(250, 250, 250, 0.6);
 }
 
 .footer-form-input:active,
 .footer-form-input:hover,
 .footer-form-input:focus {
   outline: none;
-  border-bottom: 1px solid rgba(250, 250, 250, 0.564);
+  border-bottom: 2px solid rgba(250, 250, 250, 0.564);
 }
-
 .footer-btn {
   color: #fafafa;
   background-color: #0041e8;
   border: none;
   border-radius: 50%;
   padding: 10px 20px;
-  margin-top: 16px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   width: 100px;
   height: 100px;
+  margin-right: 32px;
 }
 
 .footer-btn:hover {
   background-color: #0033cc;
 }
 
-.footer-link {
-  color: #fafafa;
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  padding: 10px 12px;
-  white-space: nowrap;
-}
-
 .footer-contacts-container {
-  margin-top: 60px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: nowrap;
   flex-direction: row;
   gap: 4px;
-  margin-bottom: 32px;
 }
 
-/* Модальне вікно */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -142,6 +130,11 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
+}
+
+.modal-overlay.active,
+.footer-modal-window.active {
+  display: block;
 }
 
 .footer-modal-window {
@@ -200,17 +193,9 @@
   display: none;
 }
 
-/* Різні медіа правила */
-
 @media screen and (min-width: 768px) {
   .footer-header {
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 500;
     font-size: 64px;
-    line-height: 1;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    color: #fafafa;
   }
   .footer-img {
     border-radius: 24px;
@@ -219,15 +204,62 @@
   }
   .footer-form {
     flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+  .footer-input-container {
+    flex-direction: row;
+  }
+  .footer-btn-container {
+    display: flex;
+    align-items: center;
   }
   .footer-btn {
-    width: 150px;
-    height: 150px;
+    margin-right: 32px;
   }
-  .footer-contacts-container {
-    margin-bottom: 169px;
+  .footer-modal-window {
+    border: 1px solid rgba(250, 250, 250, 0.1);
+    border-radius: 20px;
+    padding: 64px;
+    width: 492px;
+    height: 246px;
+    gap: 64px;
+  }
+  .close-btn-svg {
+    width: 24px;
+    height: 24px;
   }
 }
 
 @media screen and (min-width: 1440px) {
+  .footer-form {
+    gap: 32px;
+  }
+  .footer-input-container {
+    gap: 16px;
+  }
+  .footer-btn-container {
+    .background-div {
+      background-image: url('./img/work/footer-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      margin-left: 32px;
+    }
+  }
+
+  .footer-form-input {
+    max-width: 300px;
+  }
+
+  .footer-btn {
+    margin-right: 32px;
+    margin-left: auto;
+  }
+
+  .footer-contacts-container {
+    margin-top: 32px;
+    justify-content: flex-start;
+  }
 }
