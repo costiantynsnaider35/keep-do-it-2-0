@@ -7,7 +7,7 @@ const swiper = new Swiper('.projects-swiper', {
   modules: [Navigation, Keyboard],
   speed: 500,
   loop: false,
-  spaceBetween: 30,
+  spaceBetween: 99,
   slidesPerView: 1,
   direction: 'horizontal',
 
