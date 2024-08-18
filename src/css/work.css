@@ -135,7 +135,7 @@
   flex-wrap: nowrap;
   flex-direction: row;
   gap: 4px;
-  margin-top: 0;
+  margin-top: 60px;
 }
 
 .modal-overlay {
@@ -265,7 +265,6 @@
     height: 24px;
   }
 }
-
 @media screen and (min-width: 1440px) {
   .footer {
     margin-top: 130px;
