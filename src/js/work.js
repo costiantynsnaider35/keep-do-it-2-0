@@ -2,7 +2,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import axios from 'axios';
 
-const API = 'https://portfolio-js.b.goit.study/api/requests';
+axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api/requests';
 
 document.addEventListener('DOMContentLoaded', function () {
   const modalWindow = document.getElementById('modal-window');
@@ -30,10 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
   closeModalBtn.addEventListener('click', function () {
     modalOverlay.classList.remove('active');
     modalWindow.classList.remove('active');
-    setTimeout(() => {
-      modalOverlay.classList.add('visually-hidden');
-      modalWindow.classList.add('visually-hidden');
-    }, 300);
+    modalOverlay.classList.add('visually-hidden');
+    modalWindow.classList.add('visually-hidden');
   });
 
   modalOverlay.addEventListener('click', function () {
