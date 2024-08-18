@@ -107,11 +107,14 @@
   transition: background-color 0.2s ease-in-out;
   width: 100px;
   height: 100px;
-  margin-right: 32px;
+  /* margin-right: 32px; */
 }
 
 .footer-btn:hover {
   background-color: #0033cc;
+}
+.footer-btn-container {
+  align-items: center;
 }
 
 .footer-contacts-container {
@@ -222,7 +225,9 @@
     display: none;
   }
   .footer-btn {
-    margin-right: 32px;
+    padding-right: 32px;
+    width: 150px;
+    height: 150px;
   }
   .footer-modal-window {
     border: 1px solid rgba(250, 250, 250, 0.1);
@@ -239,11 +244,24 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .container {
+    padding: 0;
+  }
+
   .footer-form {
     gap: 32px;
+    padding-left: 160px;
+    padding-right: 160px;
   }
-  .footer-input-container {
-    gap: 16px;
+  .footer-title {
+    padding-left: 160px;
+    padding-right: 60px;
+  }
+  /* .footer-input-container {
+    padding-left: 160px;
+  } */
+  .footer-contacts-container {
+    padding-left: 160px;
   }
   .footer-btn-container {
     .background-div {
@@ -254,6 +272,10 @@
       width: 100%;
       margin-left: 32px;
     }
+  }
+  .footer-btn {
+    width: 150px;
+    height: 150px;
   }
 
   .footer-form-input {
