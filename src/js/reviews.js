@@ -6,9 +6,6 @@ import 'swiper/css';
 import { Navigation, Keyboard, Zoom } from 'swiper/modules';
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api/reviews';
 const reviwesList = document.querySelector('.review-list');
-const prevBtn = document.querySelector('.review-btn-prev');
-const nextBtn = document.querySelector('.review-btn-next');
-const btnIcon = document.querySelector('.btn-icon-svg');
 
 const swiper = new Swiper('.review-container', {
   modules: [Navigation, Keyboard, Zoom],
@@ -48,7 +45,7 @@ async function getReviwes() {
   // newArr підставити у перевірку замість res.data, та розкоментувати
   try {
     const res = await axios.get('');
-    console.log(res.data);
+
     if (res.data.length === 0) {
       reviwesList.insertAdjacentHTML(
         'beforeend',
@@ -87,9 +84,9 @@ async function getReviwes() {
     window.addEventListener('scroll', () => {
       if (isScrolledIntoView(targetSection) && !isToastShown) {
         iziToast.error({
-          message: 'What would you like to add?',
+          message: 'Serever error 404',
           backgroundColor: 'red',
-          position: 'bottomLeft',
+          position: 'bottomRight',
           timeout: 3000,
         });
         isToastShown = true;
