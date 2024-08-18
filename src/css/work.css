@@ -41,7 +41,7 @@
 }
 
 .footer-form {
-  margin-bottom: 78px;
+  /* margin-bottom: 78px; */
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -230,7 +230,7 @@
     flex-direction: row;
     margin-bottom: 0;
 
-    gap: 32px;
+    /* gap: 32px; */
   }
   .footer-btn-container {
     display: flex;
