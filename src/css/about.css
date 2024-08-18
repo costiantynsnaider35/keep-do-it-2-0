@@ -15,14 +15,6 @@
   gap: 16px;
 }
 
-@media screen and (min-width: 1440px) {
-  .sub-section.text-img {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-  }
-}
-
 .about-me-text-box {
   width: 343px;
   height: 500px;
@@ -34,91 +26,54 @@
 .about-me-text {
   color: #fafafa;
   font-size: 24px;
-  font-style: normal;
   font-weight: 500;
   line-height: 116.6%;
   letter-spacing: -0.72px;
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 768px) {
-  .about-me-text-box {
-    width: 704px;
-    height: 700px;
-    padding: 64px 64px 436px 64px;
-  }
-  .about-me-text {
-    font-size: 38px;
-    line-height: 105.26%;
-    letter-spacing: -1.14px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .about-me-text-box {
-    width: 680px;
-    height: 700px;
-  }
-}
-
 .about-me-text .accent-blue {
   color: #0041e8;
 }
+
 .about-me-text .accent-grey {
   color: rgba(250, 250, 250, 0.4);
 }
 
 /* -----About Me img ------*/
-
 .about-me-img {
   width: 343px;
   height: 500px;
-}
-@media screen and (min-width: 768px) {
-  .about-me-img {
-    width: 704px;
-    height: 700px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .about-me-img {
-    width: 680px;
-    height: 700px;
-  }
 }
 
 .rounded-image img {
   border-radius: 24px;
 }
 
-/* -------- Accordeon---------*/
+/* -------- Accordion---------*/
 .accordion-item {
   background-color: transparent;
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  margin-top: 0;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 
 .accordion-trigger {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin: 20px 0 32px;
   padding: 0;
   position: relative;
   width: 100%;
   color: rgba(250, 250, 250, 0.4);
   font-family: 'Inter Tight';
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   letter-spacing: -0.32px;
   text-transform: uppercase;
   background-color: transparent;
   border: none;
   text-align: left;
+  display: flex;
+  justify-content: space-between;
 }
 
 .accordion-panel {
@@ -130,62 +85,37 @@
   color: #fafafa;
   font-family: 'Inter Tight';
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   letter-spacing: -0.32px;
   margin-bottom: 32px;
 }
 
-.text.part-two {
-  margin-bottom: 20px;
-}
-
+.text.part-two,
 .text.role,
 .text.ed {
-  margin-bottom: 10px;
-}
-.text.role.part-two,
-.text.ed.text.part-two {
   margin-bottom: 20px;
-}
-
-@media screen and (min-width: 768px) {
-  .text {
-    max-width: 704px;
-    margin-bottom: 16px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .text {
-    max-width: 612px;
-    margin: 0 68px 32px auto;
-  }
-  .text.role.part-two,
-  .text.ed.text.part-two {
-    margin-bottom: 32px;
-  }
 }
 
 .acc-circle {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 100px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   border: 1px solid rgba(250, 250, 250, 0.2);
   transition: border-color 0.3s ease-out;
 }
-.acc-circle:hover {
+
+.acc-circle:hover,
+.acc-circle:focus {
   border-color: #fafafa;
 }
 
 .svg-ac {
+  width: 18px;
+  height: 18px;
   stroke: #fafafa;
   transition: all 0.3s ease-out;
 }
@@ -193,10 +123,8 @@
 .accordion-item.is-active .svg-ac {
   transform: rotate(180deg);
 }
-/* ------swiper------------- */
-.about-me-skills {
-}
 
+/* ------Swiper------------- */
 .swiper-container-wrapper {
   display: flex;
   align-items: center;
@@ -208,9 +136,9 @@
 .swiper.about-me-swiper {
   height: 130px;
   width: 260px;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
 }
+
 .about-me-swiper-wrapper {
   height: 130px;
 }
@@ -218,45 +146,28 @@
 .about-me-slide {
   width: 130px;
   height: 130px;
-  border: 1px solid white;
+  border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fafafa;
   font-family: 'Inter Tight';
-  font-size: 20px;
-  font-style: normal;
+  font-size: 16px;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: -0.4px;
   transition: background-color 0.5s ease-out;
 }
 
-@media screen and (min-width: 768px) {
-  .swiper.about-me-swiper {
-    height: 200px;
-    width: 600px;
-  }
-  .about-me-slide {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .swiper.about-me-swiper {
-    width: 1200px;
-  }
-}
-
 .about-me-slide.swiper-slide-active {
+  border-color: transparent;
   background-color: #0041e8;
 }
 
-.custom-nav-btn {
-  width: 40px;
-  height: 40px;
+.custom-nav-btn,
+.custom-nav-btn-svg {
+  width: 28px;
+  height: 28px;
   cursor: pointer;
 }
 
@@ -268,6 +179,98 @@
   transition: stroke 0.3s ease-out;
 }
 
-.custom-nav-btn:hover .arrow-slider-about {
+.custom-nav-btn:hover .arrow-slider-about,
+.custom-nav-btn:focus .arrow-slider-about {
   stroke: #fafafa;
+}
+
+/* ------ Media ------ */
+@media screen and (min-width: 768px) {
+  .about-me-wrapper {
+    gap: 64px;
+  }
+
+  .about-me-text-box {
+    width: 704px;
+    height: 700px;
+    padding: 64px 64px 436px;
+  }
+
+  .about-me-text {
+    font-size: 38px;
+    line-height: 105.26%;
+    letter-spacing: -1.14px;
+  }
+
+  .about-me-img {
+    width: 704px;
+    height: 700px;
+  }
+
+  .text {
+    max-width: 704px;
+    margin-bottom: 16px;
+  }
+
+  .accordion-trigger {
+    margin-top: 32px;
+  }
+
+  .acc-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .svg-ac {
+    width: 20px;
+    height: 20px;
+  }
+
+  .swiper.about-me-swiper {
+    height: 200px;
+    width: 600px;
+  }
+
+  .about-me-slide {
+    font-size: 20px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .custom-nav-btn,
+  .custom-nav-btn-svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-me-wrapper {
+    gap: 96px;
+  }
+
+  .sub-section.text-img {
+    flex-direction: row;
+  }
+
+  .about-me-text-box {
+    width: 680px;
+  }
+
+  .about-me-img {
+    width: 680px;
+  }
+
+  .text {
+    max-width: 612px;
+    margin: 0 68px 32px auto;
+  }
+
+  .swiper-container-wrapper {
+    padding: 0 32px;
+  }
+
+  .swiper.about-me-swiper {
+    width: 1200px;
+  }
 }
