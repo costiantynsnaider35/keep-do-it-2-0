@@ -5,6 +5,7 @@ import 'accordion-js/dist/accordion.min.css';
 import Accordion from 'accordion-js';
 import '../css/about.css';
 
+// ----- Accordion ------
 new Accordion('.accordion-container', {
   openOnInit: [0],
   elementClass: 'accordion-item',
@@ -13,9 +14,10 @@ new Accordion('.accordion-container', {
   showMultiple: true,
 });
 
-// ----------------Swiper-
+// ----- Swiper ------
 const aboutSwiper = new Swiper('.about-me-swiper', {
   modules: [Navigation, Keyboard],
+  speed: 500,
   navigation: {
     nextEl: '.custom-nav-btn',
   },
