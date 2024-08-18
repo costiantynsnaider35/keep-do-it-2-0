@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 import 'accordion-js/dist/accordion.min.css';
 import Accordion from 'accordion-js';
 import '../css/about.css';
@@ -10,12 +10,12 @@ new Accordion('.accordion-container', {
   elementClass: 'accordion-item',
   triggerClass: 'accordion-trigger',
   panelClass: 'accordion-panel',
-  showMultiple: false,
+  showMultiple: true,
 });
 
 // ----------------Swiper-
 const aboutSwiper = new Swiper('.about-me-swiper', {
-  modules: [Navigation],
+  modules: [Navigation, Keyboard],
   navigation: {
     nextEl: '.custom-nav-btn',
   },
