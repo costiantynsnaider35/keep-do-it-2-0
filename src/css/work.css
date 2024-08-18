@@ -58,11 +58,11 @@
 
 .footer-form-input {
   border: none;
-  border-bottom: 2px solid rgba(250, 250, 250, 0.2);
+  /* border-bottom: 2px solid rgba(250, 250, 250, 0.2); */
   color: #fafafa;
   background-color: #1c1d20;
   width: 100%;
-  padding: 20px 0 20px 0;
+  padding-bottom: 20px;
   box-sizing: border-box;
 }
 .footer-link {
@@ -75,16 +75,17 @@
   display: inline-block;
 }
 
-.footer-link:hover {
-  color: #0041e8;
-  border-color: #0041e8;
+.footer-link:hover .footer-link:focus {
+  border: 1px solid #fafafa;
 }
 
 .footer-line-svg {
   fill: transparent;
   stroke-width: 1px;
-  stroke: transparent;
-  display: none;
+  stroke: rgba(250, 250, 250, 0.2);
+  display: block;
+  height: 2px;
+  width: 343px;
 }
 
 .footer-form-input::placeholder {
@@ -95,7 +96,7 @@
 .footer-form-input:hover,
 .footer-form-input:focus {
   outline: none;
-  border-bottom: 2px solid rgba(250, 250, 250, 0.564);
+  /* border-bottom: 2px solid rgba(250, 250, 250, 0.564); */
 }
 .footer-btn {
   color: #fafafa;
@@ -114,7 +115,7 @@
   background-color: #0033cc;
 }
 .footer-btn-container {
-  align-items: center;
+  align-items: flex-start;
 }
 
 .footer-contacts-container {
@@ -211,6 +212,9 @@
     align-items: center;
     gap: 16px;
   }
+  .footer-form-input {
+    padding-bottom: 20px;
+  }
   .footer-input-container {
     flex-direction: row;
   }
@@ -221,11 +225,13 @@
   .footer-line-svg {
     fill: transparent;
     stroke-width: 1px;
-    stroke: transparent;
-    display: none;
+    stroke: rgba(250, 250, 250, 0.2);
+    display: block;
+    height: 2px;
+    width: 245px;
   }
   .footer-btn {
-    padding-right: 32px;
+    /* padding-right: 32px; */
     width: 150px;
     height: 150px;
   }
@@ -244,10 +250,9 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .container {
-    padding: 0;
+  .footer {
+    margin-top: 130px;
   }
-
   .footer-form {
     gap: 32px;
     padding-left: 160px;
@@ -260,6 +265,15 @@
   /* .footer-input-container {
     padding-left: 160px;
   } */
+
+  .footer-inp-img {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-form-input {
+    border-bottom: none;
+    padding: 0;
+  }
   .footer-contacts-container {
     padding-left: 160px;
   }
@@ -273,6 +287,9 @@
       margin-left: 32px;
     }
   }
+  .footer-btn-container {
+    padding-bottom: 24px;
+  }
   .footer-btn {
     width: 150px;
     height: 150px;
@@ -280,18 +297,21 @@
 
   .footer-form-input {
     max-width: 390px;
+    padding-bottom: 20px;
   }
 
   .footer-btn {
-    margin-right: 32px;
-    margin-left: auto;
+    /* margin-right: 32px; */
+    margin-left: 86px;
   }
 
   .footer-line-svg {
     fill: transparent;
     stroke-width: 1px;
-    stroke: transparent;
+    stroke: rgba(250, 250, 250, 0.2);
     display: block;
+    height: 2px;
+    width: 390;
   }
   .footer-contacts-container {
     margin-top: 32px;
