@@ -24,7 +24,7 @@
     <script type="module" crossorigin src="/keep-do-it-2-0/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/keep-do-it-2-0/assets/vendor-BlyLG-Xi.js">
     <link rel="stylesheet" crossorigin href="/keep-do-it-2-0/assets/vendor-DmKGvfGr.css">
-    <link rel="stylesheet" crossorigin href="/keep-do-it-2-0/assets/index-DZQP-6_P.css">
+    <link rel="stylesheet" crossorigin href="/keep-do-it-2-0/assets/index-BPwhcxha.css">
   </head>
   <body>
     <header class="header" id="header-id">
@@ -169,6 +169,7 @@
 
       <section class="section about-me" id="aboutme-id">
   <div class="container about-me-wrapper">
+	<h2 class="visually-hidden">About me</h2>
     <div class="sub-section text-img">
       <div class="about-me-text-box">
         <p class="about-me-text">
@@ -197,16 +198,16 @@
         </picture>
       </div>
     </div>
-    <!-- accordeon -->
+    <!-- accordion -->
     <div class="sub-section about-me-ac">
-      <div class="accordion-container">
-          <!-- ----------------------------------------------------------------------------------------- -->
-         <div class="ac accordion-item">
+      <ul class="accordion-container">
+          <!-- --- ac-item-1  -->
+         <li class="ac accordion-item">
            <h2 class="ac-header">
              <button type="button" class="accordion-trigger">
-               About me
+               <span>About me</span>
              <span class="acc-circle">
-					<svg class="svg-ac" width="20" height="20">
+					<svg class="svg-ac">
 						<use href="/keep-do-it-2-0/assets/svg-icon-qMWekQcL.svg#icon-Icon-top"></use>
 					 </svg>
 				 </span>
@@ -218,11 +219,12 @@
              <p class="text part-two">Able to work both independently and in a team. I can effectively cooperate with colleagues, exchanging ideas and finding optimal solutions. Professional maturity allows you to calmly cope with challenges and stressful situations, while maintaining a high quality of work.<br>I am always looking for opportunities for self-improvement. I actively study new technologies and practices to stay abreast of the latest innovations. I have a strong understanding of various programming languages, frameworks and architectural concepts that allow me to create efficient and scalable software.</p>
              
            </div>
-         </div>
-         <!-- ----------------------------------------------------------------------------------------- -->
-         <div class="ac accordion-item">
+         </li>
+         <!-- --- ac-item-2  -->
+         <li class="ac accordion-item">
            <h2 class="ac-header">
-             <button type="button" class=" accordion-trigger">ROLE
+             <button type="button" class=" accordion-trigger">
+					<span>ROLE</span>
 					<span class="acc-circle">
 						<svg class="svg-ac" width="20" height="20">
 							<use href="/keep-do-it-2-0/assets/svg-icon-qMWekQcL.svg#icon-Icon-top"></use>
@@ -237,10 +239,12 @@
              <p class="text role part-two">Blender(enjoy)</p>
              
            </div>
-         </div>
-         <div class="ac accordion-item">
+         </li>
+			<!-- --- ac-item-3  -->
+         <li class="ac accordion-item">
            <h2 class="ac-header">
-             <button type="button" class=" accordion-trigger">EDUCATION
+             <button type="button" class=" accordion-trigger">
+					<span>EDUCATION</span>
 					<span class="acc-circle">
 						<svg class="svg-ac" width="20" height="20">
 							<use href="/keep-do-it-2-0/assets/svg-icon-qMWekQcL.svg#icon-Icon-top"></use>
@@ -255,8 +259,8 @@
              <p class="text ed part-two">2020 - 2022 / Advanced Blender Animation Techniques, Udemy</p>
              
            </div>
-         </div>
-     </div>
+         </li>
+		</ul>
   </div>
         <!-- Skills - slider -->
         <div class="sub-section about-me-skills">
@@ -272,11 +276,11 @@
                     <li class="swiper-slide about-me-slide">TypeScript</li>
                 </ul>
             </div>
-            <div class="custom-nav-btn">
-					<svg  width="40" height="40">
+            <button type="button" class="custom-nav-btn">
+					<svg class="custom-nav-btn-svg" >
 						<use class="arrow-slider-about" href="/keep-do-it-2-0/assets/svg-icon-qMWekQcL.svg#icon-arrow-narrow-right"></use>
 					 </svg>
-				</div>
+				</button>
         </div>
         
 </div>
