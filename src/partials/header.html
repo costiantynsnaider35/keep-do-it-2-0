@@ -1,26 +1,29 @@
-<header class="header" id="header-id">
-    <div class="container header-section">
-      <a href="../index.html" class="home-link">
+  <header class="header">
+    <div class="container header-container">
+      <a href="../index.html" class="homepage-link">
         <picture>
           <source
             srcset="./img/header/header-mini-2x.jpg 2x,
             ./img/header/header-mini-1x.jpg 1x
             "
           />
-          <img src="./img/header/header-mini-1x.jpg" alt="Lloyd Jefferson" class="jeff-photo" />
+          <img src="./img/header/header-mini-1x.jpg" alt="Lloyd Jefferson" class="logo-photo" />
         </picture>
-        <span class="logo-link-text"> jefferson* </span>
+        <span class="logo-text"> jefferson* </span>
       </a>
   
-      <button type="button" class="mob-menu-open-btn" aria-label="open-menu">
-        <svg class="mob-menu-open-btn-icon" width="28" height="28">
+      <button type="button" class="mob-menu-open-btn" aria-label="openMenu">
+        <svg class="svg-open-menu" width="28" height="28">
           <use href="./img/svg-icon.svg#icon-menu-05"></use>
         </svg>
       </button>
+
+      <!--       Drop menu        -->
+
       <div class="drop-menu">
         <button type="button" class="header-menu">Menu</button>
         <nav class="drop-menu-nav">
-          <ul class="drop-menu-list">
+          <ul class="menu-list">
             <li class="drop-menu-item">
               <a href="#aboutme-id" class="drop-menu-link">About me</a>
             </li>
@@ -39,6 +42,9 @@
       <a href="#work-together" class="order-btn">Order the project</a>
     </div>
   </header>
+
+  <!--           Mobile menu        -->
+
   <div class="mob-menu">
     <button type="button" class="mob-menu-close-btn" aria-label="close-menu">
       <svg class="mob-menu-close-btn-icon" width="28" height="28">
