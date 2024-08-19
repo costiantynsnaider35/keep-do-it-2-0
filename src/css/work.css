@@ -307,10 +307,6 @@
   }
 }
 @media screen and (min-width: 1440px) {
-  .container {
-    width: 100%;
-    padding: 0;
-  }
   .footer {
     padding-top: 88px;
     background-image: url('../img/work/footer-bgP.png');
@@ -322,7 +318,15 @@
     padding-left: 196px;
     padding-right: 196px;
   }
-
+  .footer-title {
+    padding-left: 196px;
+  }
+  .footer-form {
+    padding-left: 196px;
+  }
+  .footer-contacts-container {
+    padding-left: 196px;
+  }
   .footer-line-svg {
     width: 390px;
   }
