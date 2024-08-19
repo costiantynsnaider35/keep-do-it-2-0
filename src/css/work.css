@@ -9,6 +9,7 @@
 .footer-title {
   display: flex;
   align-items: flex-start;
+  padding-left: 16px;
 }
 
 .footer-title img {
@@ -45,6 +46,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 100%;
+  padding-left: 16px;
 }
 
 .footer-input-container {
@@ -147,6 +149,7 @@
   flex-direction: row;
   gap: 4px;
   margin-top: 60px;
+  padding-left: 16px;
 }
 
 .modal-overlay {
@@ -222,14 +225,23 @@
 
 @media screen and (min-width: 768px) {
   .footer-title {
+    padding-left: 32px;
+  }
+  .footer-form {
+    padding-left: 32px;
+  }
+  .footer-contacts-container {
+    padding-left: 32px;
+  }
+  .footer-title {
     width: auto;
-    margin-bottom: 18px;
   }
   .footer-form {
     flex-direction: row;
     align-items: center;
     gap: 32px;
     padding-top: 0;
+    margin-top: -18px;
   }
   .footer-header {
     font-size: 64px;
@@ -301,7 +313,7 @@
   }
   .footer {
     padding-top: 88px;
-    background-image: url('./img/work/footer-bgP.png');
+    background-image: url('../img/work/footer-bgP.png');
     background-size: cover;
     background-position: right;
   }
