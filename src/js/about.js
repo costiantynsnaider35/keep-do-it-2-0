@@ -3,6 +3,7 @@ import 'swiper/css';
 import { Navigation, Keyboard } from 'swiper/modules';
 import 'accordion-js/dist/accordion.min.css';
 import Accordion from 'accordion-js';
+import ScrollReveal from 'scrollreveal';
 import '../css/about.css';
 
 // ----- Accordion ------
@@ -59,3 +60,27 @@ document.querySelector('.scroll-up').addEventListener('click', function () {
     behavior: 'smooth',
   });
 });
+
+// ----- ScrollReveal ------
+document.addEventListener('DOMContentLoaded', () => {
+  const sr = ScrollReveal({
+    origin: 'bottom',
+    distance: '60px',
+    duration: 2500,
+    delay: 500,
+    reset: true,
+  });
+
+  sr.reveal(`.about-me-text-box,.about-me-img`);
+  sr.reveal(`.about-me-swiper`);
+});
+
+// ---- Delete focus ------
+
+const sliderBtn = document.querySelector('.custom-nav-btn');
+
+function handleClick() {
+  this.blur();
+}
+
+sliderBtn.addEventListener('click', handleClick);

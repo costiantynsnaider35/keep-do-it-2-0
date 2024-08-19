@@ -108,8 +108,16 @@
   transition: border-color 0.3s ease-out;
 }
 
-.acc-circle:hover,
-.acc-circle:focus {
+.accordion-trigger:focus {
+  outline: transparent;
+  border-color: #fafafa;
+}
+
+.accordion-trigger:focus .acc-circle {
+  border-color: #fafafa;
+}
+
+.acc-circle:hover {
   border-color: #fafafa;
 }
 
@@ -177,6 +185,10 @@
   padding: 10px 20px;
   z-index: 10;
   transition: stroke 0.3s ease-out;
+}
+
+.custom-nav-btn:focus {
+  outline: transparent;
 }
 
 .custom-nav-btn:hover .arrow-slider-about,
