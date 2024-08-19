@@ -201,7 +201,7 @@
   background-color: #0041e8;
   border-radius: 25%;
   opacity: 0.7;
-  transition: opacity 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .scroll-up:hover {
