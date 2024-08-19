@@ -1,7 +1,7 @@
 .review-section {
   margin: 0 auto;
   width: 375px;
-  padding: 64px 16px 64px 16px;
+  padding: 32px 16px;
   background-color: #1c1d20;
 }
 
@@ -49,8 +49,6 @@ li.review-item {
   color: rgba(250, 250, 250, 0.6);
   width: 295px;
   height: 120px;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .review-btn-next,
@@ -92,14 +90,64 @@ li.review-item {
   stroke: #fafafa;
 }
 
+.err-container {
+  width: 343px;
+  height: 302px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  padding: 32px 24px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-mes {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.review-item-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+}
+
+li.review-item {
+  height: 302px;
+  margin-bottom: 32px;
+  transition-property: height, margin-bottom;
+  transition-duration: 0.2s, 0.2s;
+  transition-timing-function: ease-out;
+}
+
+li.review-item.expanded {
+  height: 326px;
+  margin-bottom: 5px;
+}
+.review-item-text {
+  animation: ease 2.5s forwards;
+}
+
+li.review-item.expanded .review-item-text {
+  text-overflow: ellipsis;
+  overflow: visible;
+}
+
 /* =========Tablet============ */
 
 @media screen and (min-width: 768px) {
   .review-section {
     margin: 0 auto;
     width: 768px;
-    padding: 96px 32px;
+    padding: 48px 32px;
     background-color: #1c1d20;
+  }
+
+  .err-container {
+    width: 100%;
   }
 }
 
@@ -108,7 +156,7 @@ li.review-item {
   .review-section {
     margin: 0 auto;
     width: 1440px;
-    padding: 164px 32px;
+    padding: 82px 32px;
     background-color: #1c1d20;
   }
 }
