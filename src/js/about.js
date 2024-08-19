@@ -42,3 +42,20 @@ const aboutSwiper = new Swiper('.about-me-swiper', {
     },
   },
 });
+
+// ----- show scroll up -----
+function scrollUp() {
+  const scrollUp = document.querySelector('.scroll-up');
+
+  if (this.scrollY >= 2250) scrollUp.classList.add('show-scroll');
+  else scrollUp.classList.remove('show-scroll');
+}
+window.addEventListener('scroll', scrollUp);
+
+// ----- scrolling up -----
+document.querySelector('.scroll-up').addEventListener('click', function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
