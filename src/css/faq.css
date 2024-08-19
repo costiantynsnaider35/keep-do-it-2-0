@@ -1,7 +1,14 @@
 .section{
   background-color: #1c1d20;
 }
-
+.text-item{
+color: #FAFAFA;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 30px;
+letter-spacing: -0.4px;
+}
 
 
 .faq-title{
@@ -15,6 +22,12 @@
 }
 
 .text-faq{
+  color: rgba(250, 250, 250, 0.60);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.32px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -75,6 +88,10 @@
   color: #fafafa;
 }
 .faq-item p {
+  text-transform: lowercase;
+}
+
+.faq-item p:first-letter {
   text-transform: capitalize;
 }
 
@@ -125,3 +142,4 @@ ul.accordion-container-faq{
     width: 70%;
   }
 }
+
