@@ -60,7 +60,7 @@
   border: none;
   color: #fafafa;
   background-color: #1c1d20;
-  width: 100%;
+  width: 129px;
   padding-bottom: 20px;
   box-sizing: border-box;
 
@@ -316,16 +316,13 @@
     background-image: url('../img/work/footer-bgP.png');
     background-size: cover;
     background-position: right;
-  }
-  .footer-title {
+
+    padding-top: 88px;
+    padding-bottom: 169px;
     padding-left: 196px;
+    padding-right: 196px;
   }
-  .footer-form {
-    padding-left: 196px;
-  }
-  .footer-contacts-container {
-    padding-left: 196px;
-  }
+
   .footer-line-svg {
     width: 390px;
   }
