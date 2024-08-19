@@ -4,7 +4,6 @@ import 'izitoast/dist/css/iziToast.min.css';
 import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Keyboard, Zoom } from 'swiper/modules';
-axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api/reviews';
 const reviwesList = document.querySelector('.review-list');
 
 const swiper = new Swiper('.review-container', {
@@ -44,7 +43,9 @@ async function getReviwes() {
   // const newArr = []; // array для перевірки на пустий масив від сервера
   // newArr підставити у перевірку замість res.data, та розкоментувати
   try {
-    const res = await axios.get('');
+    const res = await axios.get(
+      'https://portfolio-js.b.goit.study/api/reviews'
+    );
 
     if (res.data.length === 0) {
       reviwesList.insertAdjacentHTML(
