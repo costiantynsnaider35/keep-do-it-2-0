@@ -19,6 +19,7 @@
     "animejs": "^3.2.2",
     "axios": "^1.7.4",
     "izitoast": "^1.4.0",
+    "scrollreveal": "^4.0.9",
     "simplelightbox": "^2.14.3",
     "swiper": "^11.1.9",
     "vite-plugin-full-reload": "^1.2.0",
