@@ -1,7 +1,5 @@
 .hero {
   position: relative;
-  padding-top: 281px;
-  padding-bottom: 32px;
   background-image: linear-gradient(
     270deg,
     #1c1d20 49.68%,
@@ -9,9 +7,11 @@
     #0041e8 100%
   );
   z-index: 0;
+  padding-top: 281px;
+  padding-bottom: 32px;
 }
 
-.glass {
+.hero-background {
   position: absolute;
   top: 0;
   left: -57px;
@@ -27,7 +27,7 @@
   );
 }
 
-.glass-effect {
+.background-effect {
   margin-left: -5px;
   width: 57px;
   backdrop-filter: blur(100px);
@@ -66,21 +66,18 @@
   gap: 4px;
 }
 
-.hero-list-item {
-}
-
 .hero-social-link {
+  color: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 37px;
   height: 37px;
+  font-size: 14px;
+  letter-spacing: -0.02em;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background-color: transparent;
   border-radius: 60px;
-  font-size: 14px;
-  letter-spacing: -0.02em;
-  color: #fafafa;
   transition: box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1),
     border 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -91,7 +88,7 @@
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
-.hero-social-link.hero-email {
+.hero-social-link.hero-email-link {
   width: 178px;
 }
 
@@ -100,7 +97,7 @@
     padding-top: 300px;
   }
 
-  .glass {
+  .hero-background {
     width: 76%;
   }
 
@@ -122,13 +119,13 @@
     font-size: 16px;
   }
 
-  .hero-social-link.hero-email {
+  .hero-social-link.hero-email-link{
     width: 223px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .glass {
+  .hero-background {
     width: 50%;
   }
 
