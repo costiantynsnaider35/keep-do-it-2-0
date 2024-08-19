@@ -9,10 +9,12 @@ const orderLinkMob = document.querySelector('.mob-order-btn');
 
 function openMobMenu() {
   mobMenu.classList.add('is-open');
+  document.body.classList.add('no-scroll'); 
 }
 
 function closeMobMenu() {
   mobMenu.classList.remove('is-open');
+  document.body.classList.remove('no-scroll'); 
 }
 
 function openDropMenu() {
@@ -32,7 +34,7 @@ function closeDropMenuECS(evt) {
 function handlerScroll(evt) {
   evt.preventDefault();
   if (mobMenu.classList.contains('is-open')) {
-    mobMenu.classList.remove('is-open');
+    closeMobMenu(); 
   }
   const target = evt.target.getAttribute('href').substring(1);
   const targetSection = document.getElementById(target);
@@ -42,8 +44,6 @@ function handlerScroll(evt) {
     behavior: 'smooth',
   });
 }
-
-
 
 mobMenuOpen.addEventListener('click', openMobMenu);
 mobMenuClose.addEventListener('click', closeMobMenu);
@@ -62,6 +62,7 @@ window.onclick = function (evt) {
     dropMenu.classList.remove('drop-menu-show');
   }
 };
+
 
 
 
