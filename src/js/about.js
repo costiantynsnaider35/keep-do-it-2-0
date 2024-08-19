@@ -65,22 +65,30 @@ document.querySelector('.scroll-up').addEventListener('click', function () {
 document.addEventListener('DOMContentLoaded', () => {
   const sr = ScrollReveal({
     origin: 'bottom',
-    distance: '60px',
-    duration: 2500,
-    delay: 500,
+    distance: '50px',
+    duration: 2300,
+    delay: 0,
     reset: true,
   });
 
   sr.reveal(`.about-me-text-box,.about-me-img`);
+  sr.reveal(`.about-me-text`, {
+    delay: 200,
+  });
+
   sr.reveal(`.about-me-swiper`);
 });
 
 // ---- Delete focus ------
 
 const sliderBtn = document.querySelector('.custom-nav-btn');
+const accBtns = document.querySelectorAll('.accordion-trigger');
 
 function handleClick() {
   this.blur();
 }
 
 sliderBtn.addEventListener('click', handleClick);
+accBtns.forEach(accBtn => {
+  accBtn.addEventListener('click', handleClick);
+});
