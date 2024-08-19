@@ -184,6 +184,43 @@
   stroke: #fafafa;
 }
 
+/*  scroll up ---- */
+.scroll-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  cursor: pointer;
+  bottom: -20%;
+  right: 7px;
+  border-radius: 50%;
+  transition: 0.4s;
+  z-index: 999;
+  width: 30px;
+  height: 30px;
+  background-color: #0041e8;
+  border-radius: 25%;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-out;
+}
+
+.scroll-up:hover {
+  opacity: 0.9;
+}
+
+/* Show Scroll Up*/
+.show-scroll {
+  bottom: 50px;
+}
+
+.svg-scroll-up {
+  stroke: #fafafa;
+  fill: none;
+  width: 15px;
+  height: 15px;
+  transform: rotate(180deg);
+}
+
 /* ------ Media ------ */
 @media screen and (min-width: 768px) {
   .about-me-wrapper {
@@ -272,5 +309,22 @@
 
   .swiper.about-me-swiper {
     width: 1200px;
+  }
+
+  .scroll-up {
+    bottom: -20%;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Show Scroll Up*/
+  .show-scroll {
+    bottom: 50px;
+  }
+
+  .svg-scroll-up {
+    width: 25px;
+    height: 25px;
   }
 }
