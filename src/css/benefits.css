@@ -94,7 +94,8 @@
 
 }
 
-.benefits-link:hover {
+.benefits-link:hover,
+.benefits-link:focus {
     background: #0039cc;
 }
 
