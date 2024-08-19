@@ -2,6 +2,8 @@
   background-color: #1c1d20;
 }
 
+
+
 .faq-title{
   width: 265px;
   font-weight: 600;
@@ -72,6 +74,10 @@
   letter-spacing: -0.02em;
   color: #fafafa;
 }
+.faq-item p {
+  text-transform: capitalize;
+}
+
 .arrow-faq {
   display: flex;
   justify-content: center;
