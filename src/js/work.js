@@ -1,7 +1,7 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import axios from 'axios';
-// import ScrollReveal from 'scrollreveal';
+import ScrollReveal from 'scrollreveal';
 
 const modalWindow = document.getElementById('modal-window');
 const modalOverlay = document.querySelector('.modal-overlay');
@@ -72,5 +72,5 @@ document.addEventListener('DOMContentLoaded', () => {
     reset: true,
   });
 
-  sr.reveal(`.footer`);
+  sr.reveal(`.footer`, { delay: 200 });
 });
