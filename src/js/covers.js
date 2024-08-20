@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         listCovers.forEach(ul => {
             ul.classList.toggle("in-view", isVisible);
-            console.log(`Animation ${isVisible ? "started" : "stopped"}`);
         });
     }
 

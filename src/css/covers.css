@@ -1,8 +1,14 @@
 .covers {
-    width: 100%;
+    width: 375px;
     height: 508px;
     margin: 0;
     overflow: hidden;
+}
+
+@media screen and (min-width: 375px) {
+    .covers {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 768px) {
