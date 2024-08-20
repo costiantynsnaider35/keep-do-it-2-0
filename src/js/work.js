@@ -2,8 +2,6 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api/requests';
-
 const modalWindow = document.getElementById('modal-window');
 const modalOverlay = document.querySelector('.modal-overlay');
 const closeModalBtn = document.querySelector('.close-btn');
@@ -20,7 +18,10 @@ form.addEventListener('submit', async function HandleFormBtn(event) {
   };
 
   try {
-    const response = await axios.post('', formObj);
+    const response = await axios.post(
+      'https://portfolio-js.b.goit.study/api/requests',
+      formObj
+    );
     console.log(response);
 
     modalOverlay.classList.remove('visually-hidden');
@@ -60,3 +61,5 @@ document.addEventListener('keydown', function (event) {
     closeModalBtn.click();
   }
 });
+
+// Прибрати дублювання
