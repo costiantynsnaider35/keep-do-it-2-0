@@ -14,19 +14,19 @@
 @import url('./reviews.css');
 @import url('./work.css');
 
-/* @font-face {
+@font-face {
   font-family: 'Inter Tight';
-  src: url('../fonts/static/InterTight-Medium.ttf') format('ttf');
+  src: url('../fonts/static/InterTight-Medium.ttf');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Inter Tight';
-  src: url('../fonts/static/InterTight-SemiBold.ttf') format('ttf');
+  src: url('../fonts/static/InterTight-SemiBold.ttf');
   font-weight: 600;
   font-style: normal;
-} */
+}
 
 html {
   scroll-behavior: smooth;
