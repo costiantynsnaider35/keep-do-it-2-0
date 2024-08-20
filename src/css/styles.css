@@ -15,15 +15,15 @@
 @import url('./work.css');
 
 /* @font-face {
-  font-family: 'IInter Tight';
-  src: url('/src/fonts/static/InterTight-Medium.ttf') format('ttf');
+  font-family: 'Inter Tight';
+  src: url('../fonts/static/InterTight-Medium.ttf') format('ttf');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Inter Tight';
-  src: url('/src/fonts/static/InterTight-SemiBold.ttf') format('ttf');
+  src: url('../fonts/static/InterTight-SemiBold.ttf') format('ttf');
   font-weight: 600;
   font-style: normal;
 } */
