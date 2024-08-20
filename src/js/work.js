@@ -61,5 +61,3 @@ document.addEventListener('keydown', function (event) {
     closeModalBtn.click();
   }
 });
-
-// Прибрати дублювання
