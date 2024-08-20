@@ -118,7 +118,9 @@ li.review-item {
 li.review-item {
   height: 302px;
   margin-bottom: 32px;
-  transition-property: height, margin-bottom;
+  transform: scale(1);
+  translate: 0 0px;
+  transition-property: height, margin-bottom, transform, translate, border-color;
   transition-duration: 0.2s, 0.2s;
   transition-timing-function: ease-out;
 }
@@ -126,9 +128,9 @@ li.review-item {
 li.review-item.expanded {
   height: 326px;
   margin-bottom: 5px;
-}
-.review-item-text {
-  animation: ease 2.5s forwards;
+  transform: scale(1.004, 1.02);
+  translate: 0 3px;
+  border-color: #fafafa;
 }
 
 li.review-item.expanded .review-item-text {
@@ -158,5 +160,8 @@ li.review-item.expanded .review-item-text {
     width: 1440px;
     padding: 82px 32px;
     background-color: #1c1d20;
+  }
+  li.review-item:hover {
+    border-color: #fafafa;
   }
 }

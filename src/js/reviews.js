@@ -55,7 +55,7 @@ async function getReviwes() {
     } else {
       const reviwes = res.data
         .map(
-          reviwe => `<li class="review-item swiper-slide card-zoom">
+          (reviwe, index) => `<li class="review-item swiper-slide card-zoom">
             <img src="${reviwe.avatar_url}" alt="" class="review-item-img" />
             <h3 class="review-item-name">${reviwe.author}</h3>
             <p class="review-item-text">
