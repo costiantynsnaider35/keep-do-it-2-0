@@ -117,12 +117,13 @@ input:-webkit-autofill::first-line {
 
 .footer-link-container:hover,
 .footer-link-container:focus-within {
-  border-color: #0041e8;
+  border-color: #0039cc;
+  background-color: #0039cc;
 }
 
 .footer-link-container:hover .footer-link,
 .footer-link-container:focus-within .footer-link {
-  color: #0041e8;
+  color: #fafafa;
 }
 
 .footer-line-svg {
