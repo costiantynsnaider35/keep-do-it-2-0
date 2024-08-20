@@ -48,7 +48,7 @@ const aboutSwiper = new Swiper('.about-me-swiper', {
 function scrollUp() {
   const scrollUp = document.querySelector('.scroll-up');
 
-  if (this.scrollY >= 2250) scrollUp.classList.add('show-scroll');
+  if (this.scrollY >= 1000) scrollUp.classList.add('show-scroll');
   else scrollUp.classList.remove('show-scroll');
 }
 window.addEventListener('scroll', scrollUp);
