@@ -16,10 +16,6 @@ const swiper = new Swiper('.projects-swiper', {
     onlyInViewport: false,
   },
 
-  // mousewheel: {
-  //   invert: true,
-  // },
-
   navigation: {
     nextEl: '.projects-swiper-button-right',
     prevEl: '.projects-swiper-button-left',
