@@ -119,8 +119,8 @@ li.review-item {
   height: 302px;
   margin-bottom: 32px;
   transform: scale(1);
-  translate: 0 0px;
-  transition-property: height, margin-bottom, transform, translate, border-color;
+
+  transition-property: height, margin-bottom, transform, border-color;
   transition-duration: 0.2s, 0.2s;
   transition-timing-function: ease-out;
 }
@@ -128,8 +128,8 @@ li.review-item {
 li.review-item.expanded {
   height: 326px;
   margin-bottom: 5px;
-  transform: scale(1.004, 1.02);
-  translate: 0 3px;
+  transform: scale(1.004, 1.02) translateY(3px);
+
   border-color: #fafafa;
 }
 
