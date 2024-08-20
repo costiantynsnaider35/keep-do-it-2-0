@@ -1,5 +1,3 @@
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
 import axios from 'axios';
 import ScrollReveal from 'scrollreveal';
 
@@ -7,12 +5,26 @@ const modalWindow = document.getElementById('modal-window');
 const modalOverlay = document.querySelector('.modal-overlay');
 const closeModalBtn = document.querySelector('.close-btn');
 const form = document.querySelector('.footer-form');
+const emailInput = form.elements.email;
 
 form.addEventListener('submit', async function HandleFormBtn(event) {
   event.preventDefault();
 
-  const inputValue1 = form.elements.email.value;
-  const inputValue2 = form.elements.comment.value;
+  const inputValue1 = emailInput.value.trim();
+  const inputValue2 = form.elements.comment.value.trim();
+
+  clearValidationMessages();
+
+  if (!inputValue1 || !inputValue2) {
+    displayValidationMessage('Please fill in all fields.');
+    return;
+  }
+
+  if (!validateEmail(inputValue1)) {
+    displayValidationMessage('Invalid email, try again');
+    return;
+  }
+
   const formObj = {
     email: inputValue1,
     comment: inputValue2,
@@ -23,26 +35,19 @@ form.addEventListener('submit', async function HandleFormBtn(event) {
       'https://portfolio-js.b.goit.study/api/requests',
       formObj
     );
-    console.log(response);
+
+    displayValidationMessage('Success', true);
 
     modalOverlay.classList.remove('visually-hidden');
     modalWindow.classList.remove('visually-hidden');
     modalOverlay.classList.add('active');
     modalWindow.classList.add('active');
 
-    form.reset();
+    document.body.classList.add('no-scroll');
 
-    iziToast.success({
-      title: 'Success',
-      message: 'Your message has been sent successfully!',
-      position: 'topRight',
-    });
+    form.reset();
   } catch (error) {
-    iziToast.error({
-      title: 'Error',
-      message: 'Something went wrong. Please correct your input and try again.',
-      position: 'topRight',
-    });
+    displayValidationMessage('Invalid email, try again');
   }
 });
 
@@ -51,6 +56,10 @@ closeModalBtn.addEventListener('click', function () {
   modalWindow.classList.remove('active');
   modalOverlay.classList.add('visually-hidden');
   modalWindow.classList.add('visually-hidden');
+
+  document.body.classList.remove('no-scroll');
+
+  clearValidationMessages();
 });
 
 modalOverlay.addEventListener('click', function () {
@@ -74,3 +83,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sr.reveal(`.footer`, { delay: 200 });
 });
+
+emailInput.addEventListener('blur', function () {
+  if (validateEmail(emailInput.value.trim())) {
+    displayValidationMessage('Success!', true);
+  } else {
+    displayValidationMessage('Invalid email, try again');
+  }
+});
+
+function displayValidationMessage(message, success = false) {
+  clearValidationMessages();
+  const messageContainer = document.createElement('div');
+  messageContainer.className = `validation-message ${
+    success ? 'success' : 'error'
+  }`;
+  messageContainer.textContent = message;
+
+  const emailInputContainer = form.querySelector('.footer-inp-img:first-child');
+  emailInputContainer.appendChild(messageContainer);
+
+  const svg = emailInputContainer.querySelector('.footer-line-svg');
+  svg.style.stroke = success ? '#3cbc81' : '#f44336';
+}
+
+function clearValidationMessages() {
+  const messages = document.querySelectorAll('.validation-message');
+  messages.forEach(msg => msg.remove());
+
+  const svgs = document.querySelectorAll('.footer-line-svg');
+  svgs.forEach(el => {
+    el.style.stroke = 'rgba(250, 250, 250, 0.2)';
+  });
+}
+
+function validateEmail(email) {
+  const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return re.test(String(email).toLowerCase());
+}
