@@ -141,8 +141,7 @@ input:-webkit-autofill::first-line {
 }
 
 .footer-inp-img input:focus + svg,
-.footer-inp-img input:hover + svg,
-.footer-inp-img input:active + svg {
+.footer-inp-img input:hover + svg {
   stroke: #fafafa;
 }
 
@@ -154,7 +153,6 @@ input:-webkit-autofill::first-line {
   color: #fafafa;
 }
 
-.footer-form-input:active,
 .footer-form-input:hover,
 .footer-form-input:focus {
   outline: none;
