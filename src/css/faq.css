@@ -98,7 +98,7 @@
   transition: all 0.3s ease-out;
 }
 
-.faq-accordion-item.is-active .svg-ac {
+.faq-accordion-item.is-active .faq-svg-ac {
   transform: rotate(180deg);
 }
 
