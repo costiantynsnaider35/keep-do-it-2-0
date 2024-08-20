@@ -42,6 +42,14 @@
   flex-shrink: 0;
 }
 
+.background-effect {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.background-effect.in-view {
+  opacity: 1;
+}
 .hero-wrap {
   display: flex;
   flex-direction: column;
