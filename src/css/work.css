@@ -230,6 +230,8 @@ input:-webkit-autofill::first-line {
   margin-top: 60px;
 }
 
+/* Modal Window */
+
 .modal-overlay {
   position: fixed;
   top: 0;
