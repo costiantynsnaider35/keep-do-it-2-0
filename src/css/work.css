@@ -393,18 +393,8 @@ input:-webkit-autofill::first-line {
 
     padding-top: 88px;
     padding-bottom: 169px;
-    padding-left: 196px;
-    padding-right: 196px;
   }
-  .footer-title {
-    padding-left: 196px;
-  }
-  .footer-form {
-    padding-left: 196px;
-  }
-  .footer-contacts-container {
-    padding-left: 196px;
-  }
+
   .footer-line-svg {
     width: 390px;
   }
