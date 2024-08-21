@@ -9,7 +9,6 @@
 .footer-title {
   display: flex;
   align-items: flex-start;
-  padding-left: 16px;
 }
 
 .footer-title img {
@@ -229,8 +228,6 @@ input:-webkit-autofill::first-line {
   gap: 4px;
   margin-top: 60px;
 }
-
-/* Modal Window */
 
 .modal-overlay {
   position: fixed;
