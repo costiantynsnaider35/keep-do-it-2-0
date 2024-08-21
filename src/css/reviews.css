@@ -23,7 +23,7 @@ li.review-item {
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   padding: 32px 24px;
-  margin-bottom: 32px;
+
   width: 343px;
   height: 302px;
 }
@@ -60,6 +60,14 @@ li.review-item {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-property: border-color;
+  transition-duration: 0.2s, 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.review-btn-next:active,
+.review-btn-prev:active {
+  border-color: #fafafa;
 }
 
 .swiper-button-disabled .svg-icon-left {
@@ -117,7 +125,7 @@ li.review-item {
 
 li.review-item {
   height: 302px;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
   transform: scale(1);
 
   transition-property: height, margin-bottom, transform, border-color;
@@ -128,7 +136,7 @@ li.review-item {
 li.review-item.expanded {
   height: 326px;
   margin-bottom: 5px;
-  transform: scale(1.004, 1.02) translateY(3px);
+  transform: scale(1.002, 1.02) translateY(3px);
 
   border-color: #fafafa;
 }
@@ -162,6 +170,11 @@ li.review-item.expanded .review-item-text {
     background-color: #1c1d20;
   }
   li.review-item:hover {
+    border-color: #fafafa;
+  }
+
+  .review-btn-next:hover,
+  .review-btn-prev:hover {
     border-color: #fafafa;
   }
 }
