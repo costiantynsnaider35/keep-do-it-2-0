@@ -118,6 +118,17 @@
     height: 52px;
 }
 
+.projects-swiper-button-left:hover,
+.projects-swiper-button-left:focus {
+    border-color: #fafafa;
+}
+
+
+
+.projects-swiper-button-right:hover,
+.projects-swiper-button-right:focus {
+    border-color: #fafafa;
+}
 
 .projects-swiper-button-left svg {
     fill: transparent;
