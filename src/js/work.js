@@ -103,17 +103,16 @@ function displayValidationMessage(message, success = false) {
   const emailInputContainer = form.querySelector('.footer-inp-img:first-child');
   emailInputContainer.appendChild(messageContainer);
 
-  const svg = emailInputContainer.querySelector('.footer-line-svg');
-  svg.style.stroke = success ? '#3cbc81' : '#f44336';
+  emailInputContainer.classList.add(success ? 'success' : 'error');
 }
 
 function clearValidationMessages() {
   const messages = document.querySelectorAll('.validation-message');
   messages.forEach(msg => msg.remove());
 
-  const svgs = document.querySelectorAll('.footer-line-svg');
-  svgs.forEach(el => {
-    el.style.stroke = 'rgba(250, 250, 250, 0.2)';
+  const inputContainers = document.querySelectorAll('.footer-inp-img');
+  inputContainers.forEach(container => {
+    container.classList.remove('success', 'error');
   });
 }
 
