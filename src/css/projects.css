@@ -116,17 +116,13 @@
     padding: 14px;
     width: 52px;
     height: 52px;
+    transition-property: border-color;
+    transition-duration: 0.2s, 0.2s;
+    transition-timing-function: ease-out;
 }
 
-.projects-swiper-button-left:hover,
-.projects-swiper-button-left:focus {
-    border-color: #fafafa;
-}
-
-
-
-.projects-swiper-button-right:hover,
-.projects-swiper-button-right:focus {
+.projects-swiper-button-left:active,
+.projects-swiper-button-right:active {
     border-color: #fafafa;
 }
 
@@ -242,5 +238,10 @@
         height: 625px;
         border-radius: 0 24px 24px 0;
     }
+
+    .projects-swiper-button-left:hover,
+    .projects-swiper-button-right:hover {
+    border-color: #fafafa;
+}
 
 }
